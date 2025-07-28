@@ -1,0 +1,57 @@
+/*
+declaration block::after
+
+selection{
+        property: value;
+        property2: value;
+
+}
+*/
+
+body{
+    background-color: rgba(126,217,86,255);
+    color: rgb(0, 5, 78);
+}
+
+nav{
+    height: 600px;
+    width: 202px;
+    float: left;
+    padding: 5px;
+    line-height: 35px;
+}
+
+footer{
+    text-align: center;
+    margin-right: 200px;
+    font-weight: bold;
+}
+
+#scienceJokeImage{
+    margin-right: 240px;
+    width: 355px;
+    height: 355px;
+}
+
+h1{
+    text-align: center;
+    font-weight: 400;
+}
+
+#wholsomeImage{
+    margin-left: 200px;
+    width: 200px;
+    height: 200px;
+}
+
+#switchImage1{
+    margin-left: 200px;
+    width: 700px;
+    height: 500px;
+}
+
+#switchImage2{
+    margin-left: 200px;
+    width: 700px;
+    height: 500px;
+}

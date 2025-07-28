@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Dice Game</title>
+
+        <!-- add in the CSS file created in Assignment 2.1-->
+         <link rel="stylesheet" href="main.css">
+
+    </head>
+    <body>
+        <header>
+            <h1>Welcome to the CSC102 Home Page!</h1>
+                <nav>
+                    <a href="index.html">Home</a>
+                    <br>
+                    <a href="boards.html">Boards</a>
+                    <br>
+                    <a href="game.html">Game</a>
+                    <br>
+                    <a href="casino_game.html">Casino</a>
+                    <br>
+                    <a href="strings.html">Strings</a>
+                </nav>
+        </header>
+        
+        <!-- add a button so the user can start playing our dice game-->
+         <button onclick="playDiceGame();">Play Dice Game</button>
+
+         <div id="divDie1">Die 1 Roll</div>
+         <br>
+         <div id="divDie2">Die 2 Roll</div>
+         <br>
+         <div id="divSum">Sum of the Rolls</div>
+         <br>
+         <br>
+         <br>
+
+         <div id="divResults">Dice Game Results</div>
+
+         <!-- this is JavaScript code. It goes between the script tags; Don't use HTML or CSS styles directly in JavaScript code-->
+         <script>
+
+            // single line comments
+            /* multiline comment */
+
+
+            // this function will allow us to play our game
+            function playDiceGame()
+            {
+                //you can display helpful messages in the console within the program
+                console.log("playDiceGame function called");
+
+                // set up 2 variables to hold the 2 die rolls that my game needs to do
+                let die1 = rollDie();
+                let die2 = rollDie();
+
+                console.log("die1= " + die1);
+                console.log("die2= " + die2);
+
+                let sum = die1 + die2;
+
+                console.log("sum= " + sum);
+
+
+                // create a variable that holds a shortcut/nickname for the first dice roll
+                let divDie1 = document.getElementById("divDie1");
+                // create a variable that holds a shortcut/nickname for the second dice roll
+                let divDie2 = document.getElementById("divDie2");
+                // create a variable that holds a shortcut/nickname for the dice roll sum
+                let divSum = document.getElementById("divSum");
+                // create a variable that holds a shortcut/nickname for the dice roll results
+                let divResults = document.getElementById("divResults");
+
+                //change the text in the HTML elements
+                divDie1.textContent = "Die 1: " + die1;
+                // or you can use divDie1.innerHTML = die1;
+
+                //change the text in the HTML elements
+                divDie2.textContent = "Die 2: " + die2;
+
+                //change the text in the HTML elements
+                divSum.textContent = "Sum is: " + sum;
+
+                // if the sum is either 7 or 11 in craps, you lose
+
+                /* make sure to use == in the if statements - that is for equality
+                if you use only =, that will change the value of the variables on the left
+                hand side to the value on the right hand side */
+                if (sum == 7 || sum == 11)
+                {
+                // display message that user lost
+                console.log("You lost >:D");
+
+                // change result to losing game
+                divResults.textContent = "You lost >:D";
+
+                // displays the ru
+                }
+
+            // next statement will check to see if we have won
+
+            /*check to see if both numbers are the same
+            and then, it will check to see if the the numbers are
+            even. Die1 % 2 == 0 <== checks if the die when divided by 2,
+            is there a remainder? - if there is a remainder, the number is odd;
+            if not, it's even. */
+
+            else if (die1 == die2 && die1 % 2 == 0){
+                console.log("you've won! :D");
+
+                // Play win sound
+                document.getElementById("winSound").play();
+
+                // change result to winning game
+                divResults.textContent = "You've won! :D";
+            }
+
+            else
+            {
+                console.log("Darn, that's a tie!");
+
+                // change result to it's a tie
+                divResults.textContent = "Darn, that's a tie!";
+            }
+            
+
+            // function to simulate the rolling of a 6-sided die
+            function rollDie()
+            {
+                // multiply random number between 0 and 1 by 6 to get the random roll dice roll
+                let randomNumber = Math.random() * 6;
+
+                // round the number up to the next whole number
+                randomNumber = Math.ceil(randomNumber);
+
+                // return the random number that was generated
+                return randomNumber;
+            }
+        }
+         </script>
+         <audio id="winSound" src="sound-effect-crowd-applause-and-cheering-237756.mp3"></audio>
+         <audio id="lostSound" src="crowd-disappointment-reaction-352718.mp3"></audio>
+    </body>
+</html>

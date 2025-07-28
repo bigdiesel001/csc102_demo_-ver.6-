@@ -1,0 +1,62 @@
+<!-- Michael Roger Collins, 7/7/25 -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSC102 Index Page</title>
+    <link rel="stylesheet" href="main.css">
+    <style>
+        #scienceJokeImage {
+            position: absolute;
+            left: 50px;
+            top: 200px;
+            transition: left 0.1s, top 0.1s;
+        }
+
+        #goofyCatImage {
+            position: absolute;
+            left: 100px;
+            top: 300px;
+            transition: left 0.1s, top 0.1s;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Welcome to the CSC102 Home Page!</h1>
+        <nav>
+            <a href="index.html">Home</a><br>
+            <a href="boards.html">Boards</a><br>
+            <a href="game.html">Game</a><br>
+            <a href="casino_game.html">Casino</a><br>
+            <a href="strings.html">Strings</a>
+        </nav>
+    </header>
+
+    <footer>
+        Michael Roger Collins<br>
+        University of Advancing Technology<br>
+        2625 W Baseline Rd<br>
+        Tempe, AZ 85283, USA<br><br><br>
+    </footer>
+
+    <div>
+        <button id="startBtn">Start</button>
+        <button id="stopBtn" disabled>Stop</button>
+    </div>
+
+    <p>
+        <img id="scienceJokeImage" src="joke.jpg">
+        <img id="goofyCatImage" src="funny-beluga-meme-cat-hd-transparent-background-735811696675541naaswhla0k.png">
+    </p>
+
+    <script src="eventImage.js"></script>
+
+
+    <!-- This is the background music that will play on a loop when the start button is pressed-->
+
+    <audio id="goofyMusic" src="kefka_theme.mp3" loop autoplay></audio>
+</body>
+</html>

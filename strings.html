@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Dice Game</title>
+
+        <!-- add in the CSS file created in Assignment 2.1-->
+         <link rel="stylesheet" href="stringStyle.css">
+
+    </head>
+    <body>
+        <header>
+            <h1>Welcome to the CSC102 Home Page!</h1>
+                <nav>
+                    <a href="index.html">Home</a>
+                    <br>
+                    <a href="boards.html">Boards</a>
+                    <br>
+                    <a href="game.html">Game</a>
+                    <br>
+                    <a href="casino_game.html">Casino</a>
+                    <br>
+                    <a href="strings.html">Strings</a>
+                </nav>
+        </header>
+
+        <form id="userForm" autocomplete="off">
+            <label for="firstName">First Name:</label>
+            <input type="text" id="firstName" name="firstName" required><br>
+            <label for="lastName">Last Name:</label>
+            <input type="text" id="lastName" name="lastName" required><br>
+            <label for="zipCode">Zip Code:</label>
+            <input type="text" id="zipCode" name="zipCode" required maxlength="5"><br>
+            <input type="submit" value="Submit">
+            <input type="reset" value="Reset">
+        </form>
+
+        <div id="message" style="margin-top:20px; color:red;"></div>
+
+        <script src="text_input.js"></script>
+
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <p>
+
+            <!-- this is an image of a meme along with its ID and the source which the image comes from -->
+
+
+            <img id="wholesomeImage" src="lbbh3ma0kwh41.jpg" alt="Wholesome Comic">
+            <br>
+            <br>
+            <!-- these are two images that will be switched out when the user enters their name and zip code correctly -->
+            <img id="switchImage1" src="Hidden_Coders_of_Illuminati__1_-removebg-preview.png" alt="Image 1" style="display:none;">
+            <img id="switchImage2" src="Hidden_Coders_of_Illuminati-removebg-preview.png" alt="Image 2" style="display:none;">
+            
+        </p>
+    </body>
+</html>
